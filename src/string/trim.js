@@ -1,5 +1,7 @@
 'use strict'
 
-const trim = s => s.trim()
+const curry = require('../curry/curry')
+
+const trim = curry(s => s.trim())
 
 module.exports = trim

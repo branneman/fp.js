@@ -1,5 +1,7 @@
 'use strict'
 
-const isStr = x => typeof x === 'string'
+const curry = require('../curry/curry')
+
+const isStr = curry(x => typeof x === 'string')
 
 module.exports = isStr

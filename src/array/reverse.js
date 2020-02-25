@@ -1,5 +1,7 @@
 'use strict'
 
-const reverse = list => list.slice().reverse()
+const curry = require('../curry/curry')
+
+const reverse = curry(list => list.slice().reverse())
 
 module.exports = reverse

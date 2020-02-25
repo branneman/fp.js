@@ -1,5 +1,7 @@
 'use strict'
 
-const length = xs => xs.length
+const curry = require('../curry/curry')
+
+const length = curry(xs => xs.length)
 
 module.exports = length

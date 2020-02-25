@@ -1,5 +1,7 @@
 'use strict'
 
-const lower = s => s.toLowerCase(s)
+const curry = require('../curry/curry')
+
+const lower = curry(s => s.toLowerCase(s))
 
 module.exports = lower

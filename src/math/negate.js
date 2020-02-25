@@ -1,5 +1,7 @@
 'use strict'
 
-const negate = x => -x
+const curry = require('../curry/curry')
+
+const negate = curry(x => -x)
 
 module.exports = negate

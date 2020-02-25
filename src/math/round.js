@@ -1,5 +1,7 @@
 'use strict'
 
-const round = x => Math.round(x)
+const curry = require('../curry/curry')
+
+const round = curry(x => Math.round(x))
 
 module.exports = round

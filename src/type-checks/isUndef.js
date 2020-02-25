@@ -1,5 +1,7 @@
 'use strict'
 
-const isUndef = x => typeof x === 'undefined'
+const curry = require('../curry/curry')
+
+const isUndef = curry(x => typeof x === 'undefined')
 
 module.exports = isUndef

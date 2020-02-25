@@ -1,5 +1,7 @@
 'use strict'
 
-const ceil = x => Math.ceil(x)
+const curry = require('../curry/curry')
+
+const ceil = curry(x => Math.ceil(x))
 
 module.exports = ceil

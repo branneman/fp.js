@@ -1,5 +1,7 @@
 'use strict'
 
-const values = x => Object.values(x)
+const curry = require('../curry/curry')
+
+const values = curry(x => Object.values(x))
 
 module.exports = values

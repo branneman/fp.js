@@ -1,7 +1,8 @@
 'use strict'
 
+const curry = require('../curry/curry')
 const isObj = require('./isObj')
 
-const isRegExp = x => isObj(x) && x instanceof RegExp
+const isRegExp = curry(x => isObj(x) && x instanceof RegExp)
 
 module.exports = isRegExp

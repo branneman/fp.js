@@ -1,5 +1,7 @@
 'use strict'
 
-const not = x => !x
+const curry = require('../curry/curry')
+
+const not = curry(x => !x)
 
 module.exports = not
