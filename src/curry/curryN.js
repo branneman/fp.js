@@ -1,6 +1,7 @@
 'use strict'
 
-const isPlaceholder = x => x['@@functional/placeholder'] === true
+const isPlaceholder = x =>
+  x === Object(x) && x['@@functional/placeholder'] === true
 const filterPlaceholders = xs => xs.filter(isPlaceholder)
 const filterValues = xs => xs.filter(x => !isPlaceholder(x))
 

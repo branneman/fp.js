@@ -2,6 +2,6 @@
 
 const curry = require('../curry/curry')
 
-const isNum = curry(x => typeof x === 'number' && isFinite(x))
+const isNum = curry(x => typeof x === 'number' && Number.isFinite(x))
 
 module.exports = isNum

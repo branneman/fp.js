@@ -7,18 +7,36 @@ module.exports = {
   curry: require('./src/curry/curry'),
   _: require('./src/curry/placeholder'),
 
-  // Typechecks
-  isUndef: require('./src/type-checks/isUndef'),
-  isNull: require('./src/type-checks/isNull'),
-  isBool: require('./src/type-checks/isBool'),
-  isNum: require('./src/type-checks/isNum'),
-  isInt: require('./src/type-checks/isInt'),
-  isStr: require('./src/type-checks/isStr'),
-  isArr: require('./src/type-checks/isArr'),
-  isRegExp: require('./src/type-checks/isRegExp'),
-  isFunc: require('./src/type-checks/isFunc'),
-  isSymbol: require('./src/type-checks/isSymbol'),
-  isObj: require('./src/type-checks/isObj'),
+  // Types
+  type: require('./src/types/type'),
+  isDef: require('./src/types/isDef'),
+  isUndef: require('./src/types/isUndef'),
+  isNull: require('./src/types/isNull'),
+  isBool: require('./src/types/isBool'),
+  isNaN: require('./src/types/isNaN'),
+  isFinite: require('./src/types/isFinite'),
+  isNum: require('./src/types/isNum'),
+  isInt: require('./src/types/isInt'),
+  isStr: require('./src/types/isStr'),
+  isArr: require('./src/types/isArr'),
+  isObj: require('./src/types/isObj'),
+  isPojo: require('./src/types/isPojo'),
+  isRegExp: require('./src/types/isRegExp'),
+  isFunc: require('./src/types/isFunc'),
+  isSymbol: require('./src/types/isSymbol'),
+
+  // Predicates
+  // identical()
+  // equals()
+  // neg()
+  // pos()
+  // even()
+  // odd()
+  // decimal()
+  // empty()
+  // every()
+  // some()
+  // sequential()
 
   // Array higher-order
   map: require('./src/array-higher-order/map'),
@@ -83,7 +101,6 @@ module.exports = {
   median: require('./src/math/median'),
 
   // String
-  str: require('./src/string/str'),
   split: require('./src/string/split'),
   trim: require('./src/string/trim'),
   test: require('./src/string/str-test'),

@@ -19,4 +19,15 @@ describe('curryN()', () => {
     expect(res4).toStrictEqual(3)
     expect(res5).toStrictEqual(3)
   })
+
+  it('should see undefined or null as an argument', () => {
+    const unaryFn = x => (typeof x === 'undefined' ? 13 : 37)
+    const fn = curryN(1, unaryFn)
+
+    const res1 = fn(undefined)
+    const res2 = fn(null)
+
+    expect(res1).toEqual(13)
+    expect(res2).toEqual(37)
+  })
 })
