@@ -1,14 +1,12 @@
 'use strict'
 
-const curry = require('../curry/curry')
 const reduce = require('../array-higher-order/reduce')
+const includes = require('./includes')
+const append = require('./append')
 
-const distinct = curry(xs =>
-  reduce(
-    (acc, curr) => (acc.indexOf(curr) < 0 ? acc.concat([curr]) : acc),
-    [],
-    xs
-  )
+const distinct = reduce(
+  (acc, x) => (!includes(x, acc) ? append(x, acc) : acc),
+  []
 )
 
 module.exports = distinct

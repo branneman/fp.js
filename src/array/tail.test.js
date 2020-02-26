@@ -3,7 +3,13 @@
 const tail = require('./tail')
 
 describe('tail()', () => {
-  xit('returns all but the first element', () => {})
+  it('returns all but the first element', () => {
+    const xs = [1, 3, 3, 7]
+
+    const result = tail(xs)
+
+    expect(result).toEqual([3, 3, 7])
+  })
 
   it('is immutable', () => {
     const xs = [1, 2, 3]

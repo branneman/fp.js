@@ -1,7 +1,9 @@
 'use strict'
 
-const slice = require('./slice')
+const curry = require('../curry/curry')
+const nth = require('./nth')
+const length = require('./length')
 
-const last = slice(-1, Infinity)
+const last = curry(xs => nth(length(xs) - 1, xs))
 
 module.exports = last

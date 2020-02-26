@@ -3,7 +3,14 @@
 const last = require('./last')
 
 describe('last()', () => {
-  xit('returns the last element', () => {})
+  it('returns the last element', () => {
+    const xs = [1, 3, 3, 7]
+
+    const result = last(xs)
+
+    expect(result).toEqual(7)
+  })
+
   xit('is curried', () => {})
 
   it('is immutable', () => {

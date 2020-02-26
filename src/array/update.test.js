@@ -3,7 +3,13 @@
 const update = require('./update')
 
 describe('update()', () => {
-  xit('updates the value at the given index of the supplied array', () => {})
+  it('updates the value at the given index of the supplied list', () => {
+    const xs = [1, 2, 3, 7]
+
+    const result = update(1, 3, xs)
+
+    expect(result).toEqual([1, 3, 3, 7])
+  })
 
   it('is immutable', () => {
     const xs = [1, 2, 3]

@@ -3,7 +3,13 @@
 const init = require('./init')
 
 describe('init()', () => {
-  xit('returns all but the last element', () => {})
+  it('returns all but the last element', () => {
+    const xs = [1, 3, 3, 7]
+
+    const result = init(xs)
+
+    expect(result).toEqual([1, 3, 3])
+  })
 
   it('is immutable', () => {
     const xs = [1, 2, 3]

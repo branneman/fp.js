@@ -40,13 +40,14 @@ module.exports = {
 
   // Array higher-order
   map: require('./src/array-higher-order/map'),
+  chain: require('./src/array-higher-order/chain'),
   filter: require('./src/array-higher-order/filter'),
   reduce: require('./src/array-higher-order/reduce'),
   reduceRight: require('./src/array-higher-order/reduceRight'),
   find: require('./src/array-higher-order/find'),
-  // findIndex
+  findIndex: require('./src/array-higher-order/findIndex'),
   sort: require('./src/array-higher-order/sort'),
-  includes: require('./src/array-higher-order/includes'),
+  // mapsort
 
   // Array
   length: require('./src/array/length'),
@@ -57,8 +58,9 @@ module.exports = {
   init: require('./src/array/init'),
   tail: require('./src/array/tail'),
   last: require('./src/array/last'),
-  // append
-  // prepend
+  includes: require('./src/array/includes'),
+  append: require('./src/array/append'),
+  prepend: require('./src/array/prepend'),
   join: require('./src/array/join'),
   concat: require('./src/array/concat'),
   update: require('./src/array/update'),
@@ -133,7 +135,7 @@ module.exports = {
   // always
   // unary
   // binary
-  // flip
+  flip: require('./src/function/flip'),
   compose: require('./src/function/compose'),
   pipe: require('./src/function/pipe'),
   complement: require('./src/function/complement'),

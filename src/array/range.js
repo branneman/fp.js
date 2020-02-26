@@ -1,9 +1,13 @@
 'use strict'
 
 const curry = require('../curry/curry')
-const map = require('../array-higher-order/map')
-const add = require('../math/add')
+const append = require('../array/append')
+const reverse = require('../array/reverse')
 
-const range = curry((from, to) => map(add(from), [...Array(to - from).keys()]))
+const range = curry((min, max, acc = []) => {
+  if (min > max) return reverse(range(max, min, acc))
+  if (min === max) return append(min, acc)
+  return range(min + 1, max, append(min, acc))
+})
 
 module.exports = range

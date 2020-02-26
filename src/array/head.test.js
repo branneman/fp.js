@@ -3,7 +3,14 @@
 const head = require('./head')
 
 describe('head()', () => {
-  xit('returns the first element', () => {})
+  it('returns the first element', () => {
+    const xs = [42, 1337]
+
+    const result = head(xs)
+
+    expect(result).toEqual(42)
+  })
+
   xit('is curried', () => {})
 
   it('is immutable', () => {

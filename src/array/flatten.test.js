@@ -3,8 +3,21 @@
 const flatten = require('./flatten')
 
 describe('flatten()', () => {
-  xit('turns a nested list into one flat list', () => {})
-  xit('flattens an array of empty arrays', () => {})
+  it('turns a nested list into one flat list', () => {
+    const xs = [1, 2, [3, 4], 5, [6, 7], [8, [9]]]
+
+    const result = flatten(xs)
+
+    expect(result).toEqual([1, 2, 3, 4, 5, 6, 7, 8, [9]])
+  })
+
+  it('flattens a list of empty lists', () => {
+    const xs = [[], [], [], []]
+
+    const result = flatten(xs)
+
+    expect(result).toEqual([])
+  })
 
   it('is immutable', () => {
     const xs = [1, 2, 3]

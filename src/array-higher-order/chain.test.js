@@ -1,22 +1,31 @@
 'use strict'
 
-const map = require('./map')
+const chain = require('./chain')
 
-describe('map()', () => {
+describe('chain()', () => {
   it('maps functions over arrays', () => {
     const f = jest.fn(a => a.toUpperCase())
     const xs = ['foo', 'bar']
 
-    const result = map(f, xs)
+    const result = chain(f, xs)
 
     expect(result).toEqual(['FOO', 'BAR'])
+  })
+
+  it('maps, then flattens', () => {
+    const f = x => [x + 10]
+    const xs = [1, 3, 3, 7]
+
+    const result = chain(f, xs)
+
+    expect(result).toEqual([11, 13, 13, 17])
   })
 
   it('maps a list from left to right', () => {
     const f = jest.fn(a => a + 10)
     const xs = [1, 2, 3, 4]
 
-    const result = map(f, xs)
+    const result = chain(f, xs)
 
     expect(f.mock.calls.length).toEqual(4)
     expect(f.mock.calls[0]).toEqual([1])
@@ -30,7 +39,7 @@ describe('map()', () => {
     const f = x => x
     const xs = []
 
-    const result = map(f, xs)
+    const result = chain(f, xs)
 
     expect(result).toEqual([])
   })
@@ -41,7 +50,7 @@ describe('map()', () => {
     const xs = [1, 2, 3]
 
     const f = x => x
-    const x = map(f, xs)
+    const x = chain(f, xs)
 
     expect(x).not.toBe(xs)
   })
