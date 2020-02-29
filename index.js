@@ -129,10 +129,10 @@ module.exports = {
   lensProp: require('./src/lenses/lensProp'),
 
   // Function
-  // T
-  // F
-  // identity
-  // always
+  T: require('./src/function/T'),
+  F: require('./src/function/F'),
+  identity: require('./src/function/identity'),
+  always: require('./src/function/always'),
   // unary
   // binary
   flip: require('./src/function/flip'),
