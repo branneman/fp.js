@@ -2,6 +2,6 @@
 
 const curry = require('../curry/curry')
 
-const apply = curry((f, xs) => f.apply(null, xs))
+const apply = curry((f, xs) => f(...xs))
 
 module.exports = apply
