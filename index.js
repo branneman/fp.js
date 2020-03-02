@@ -40,6 +40,7 @@ module.exports = {
 
   // Array higher-order
   map: require('./src/array-higher-order/map'),
+  ap: require('./src/array-higher-order/ap'),
   chain: require('./src/array-higher-order/chain'),
   filter: require('./src/array-higher-order/filter'),
   reduce: require('./src/array-higher-order/reduce'),

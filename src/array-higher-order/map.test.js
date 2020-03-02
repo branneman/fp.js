@@ -1,6 +1,7 @@
 'use strict'
 
 const map = require('./map')
+const identity = require('../function/identity')
 
 describe('map()', () => {
   it('maps functions over arrays', () => {
@@ -33,6 +34,40 @@ describe('map()', () => {
     const result = map(f, xs)
 
     expect(result).toEqual([])
+  })
+
+  it('composes', function() {
+    var mdouble = map(x => x * 2)
+    var mdec = map(x => x - 1)
+
+    const result = mdec(mdouble([10, 20, 30]))
+
+    expect(result).toEqual([19, 39, 59])
+  })
+
+  it('dispatches to fantasy-land/map method', () => {
+    class Identity {
+      constructor(x) {
+        this.x = x
+      }
+      static of(x) {
+        return new Identity(x)
+      }
+      ['fantasy-land/map'](f) {
+        return Identity.of(f(this.x))
+      }
+      ['fantasy-land/chain'](f) {
+        return f(this.x)
+      }
+    }
+
+    const f = x => x + 1
+    const m = Identity.of(6)
+
+    const resultM = map(f, m)
+    const result = resultM['fantasy-land/chain'](identity)
+
+    expect(result).toEqual(7)
   })
 
   xit('is curried', () => {})
