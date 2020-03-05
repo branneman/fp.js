@@ -134,8 +134,9 @@ module.exports = {
   F: require('./src/function/F'),
   identity: require('./src/function/identity'),
   always: require('./src/function/always'),
-  // unary
-  // binary
+  unary: require('./src/function/unary'),
+  binary: require('./src/function/binary'),
+  nAry: require('./src/function/nAry'),
   flip: require('./src/function/flip'),
   compose: require('./src/function/compose'),
   pipe: require('./src/function/pipe'),
