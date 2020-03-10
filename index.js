@@ -143,6 +143,6 @@ module.exports = {
   complement: require('./src/function/complement'),
   call: require('./src/function/call'),
   apply: require('./src/function/apply'),
-  // tap
+  tap: require('./src/function/tap'),
 
 }
