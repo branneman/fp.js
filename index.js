@@ -141,7 +141,7 @@ module.exports = {
   compose: require('./src/function/compose'),
   pipe: require('./src/function/pipe'),
   complement: require('./src/function/complement'),
-  // call
+  call: require('./src/function/call'),
   apply: require('./src/function/apply'),
   // tap
 
