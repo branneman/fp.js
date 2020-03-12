@@ -48,7 +48,6 @@ module.exports = {
   find: require('./src/array-higher-order/find'),
   findIndex: require('./src/array-higher-order/findIndex'),
   sort: require('./src/array-higher-order/sort'),
-  // mapsort
 
   // Array
   length: require('./src/array/length'),
@@ -75,6 +74,8 @@ module.exports = {
   and: require('./src/logic/and'),
   or: require('./src/logic/or'),
   xor: require('./src/logic/xor'),
+  // either
+  // both
   eq: require('./src/logic/eq'),
   lt: require('./src/logic/lt'),
   lte: require('./src/logic/lte'),
@@ -83,6 +84,7 @@ module.exports = {
   min: require('./src/logic/min'),
   max: require('./src/logic/max'),
   defaultTo: require('./src/logic/defaultTo'),
+  cond: require('./src/logic/cond'),
 
   // Math
   add: require('./src/math/add'),
