@@ -10,8 +10,8 @@ describe('over()', () => {
   it('is immutable', () => {
     const o = { x: 1, amount: 10 }
 
-    const amountLens = lens(prop('amount'))(assoc('amount'))
-    over(amountLens)(add(5))(o)
+    const amountLens = lens(prop('amount'), assoc('amount'))
+    over(amountLens, add(5), o)
 
     expect(o).toEqual({ x: 1, amount: 10 })
   })
